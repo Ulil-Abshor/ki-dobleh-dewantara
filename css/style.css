@@ -85,6 +85,40 @@ body {
     display: none;
 }
 
+/* navbar search form */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--bg);
+    padding: 1rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
 /* hero section */
 .hero {
     min-height: 100vh;
@@ -143,6 +177,10 @@ body {
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
+.hero .content a:hover {
+    color: var(--bg);
+}
+
 /* tentang */
 .tentang, .biografi, .kontak {
     padding: 8rem 7% 1.4rem;
@@ -158,47 +196,53 @@ body {
     color: var(--primary);
 }
 
-.tentang .row {
-    display: flex;
-}
-
-.tentang .row .tentang-img {
-    flex: 1 1 45rem;
-}
-
-.tentang .row .tentang-img img {
-    width: 90%;
-    border-radius: 50%;
-}
-
-.tentang .row .content {
-    flex: 1 1 35rem;
-    padding: 0 1rem;
-}
-
-.tentang .row .content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.tentang .row .content p {
-    margin-bottom: 0.8rem;
-    font-size: 1.4rem;
-    font-weight: 100;
-    line-height: 1.6;
-}
-
-/* biografi */
-.biografi h2, .kontak h2 {
-    margin-bottom: 1rem;
-}
-
-.biografi p, .kontak p {
+.tentang p, .kontak p {
     text-align: center;
     margin: auto;
     font-weight: 100;
     line-height: 1.6;
     font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.tentang .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* biografi */
+/* .biografi .wer {
+    display: flex;
+} */
+
+.biografi .wer .biografi-img {
+    flex: 1 1 45rem;
+}
+
+.biografi .wer .biografi-img img {
+    width: 50%;
+    border-radius: 50%;
+    float: left;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+
+.biografi .wer .conten {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.biografi .wer .conten h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.biografi .wer .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
 }
 
 /* kontak */
@@ -251,7 +295,7 @@ body {
 footer {
     background-color: var(--primary);
     text-align: center;
-    padding: 1rem 0 3rem;
+    padding: 1rem 0;
     margin-top: 3rem;
 }
 
@@ -336,7 +380,16 @@ footer .credit a {
     transform: scaleX(0.2);
  }
 
- .tentang .row {
+ .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+ }
+
+ .tentang {
+    font-size: 1.6rem;
+ }
+
+ /* .tentang .row {
     flex-wrap: wrap;
  }
 
@@ -356,10 +409,33 @@ footer .credit a {
 
 .tentang .row .content p {
     font-size: 1.6rem;
-}
- .biografi p {
-    font-size: 1.6rem;
+} */
+
+.biografi .wer {
+    flex-wrap: wrap;
  }
+
+.biografi .wer .biografi-img img {
+    object-fit: cover;
+    object-position: center;
+ }
+
+.biografi .wer .conten {
+    padding: 0;
+ }
+
+.biografi .wer .conten h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+ }
+
+.biografi .wer .conten p {
+    font-size: 1.6rem;
+}
+
+ /* .biografi p {
+    font-size: 1.6rem;
+ } */
 
 .kontak .row {
     flex-wrap: wrap;
